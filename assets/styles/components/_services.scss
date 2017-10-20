@@ -1,0 +1,90 @@
+.header {
+  color: $blue;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.services-section {
+  background: $grey-background;
+  &__header {
+    margin-bottom: 35px;
+  }
+  &__row {
+    max-width: 1200px;
+    padding: 40px 20px 20px;
+    margin: 0 auto;
+  }
+  &__intro {
+    text-align: center;
+    color: #fff;
+    line-height: 25px;
+    font-size: 18px;
+    @include md {
+      padding: 0 60px;
+    }
+  }
+}
+
+.skills {
+  flex-flow: column;
+  display: flex;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+  @include md {
+        flex-flow: row;
+    }
+  &__column {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    flex: 1 1 0;
+    border-radius: 2px;
+    margin-bottom: 40px;
+    @include md {
+      margin: 0 20px;
+      }
+    &__header {
+      font-size: 30px;
+      white-space: nowrap;
+      @include md {
+        font-size: 20px;
+      }
+      @include lg {
+        font-size: 30px;
+      }
+    }
+    .sr-icon {
+      font-size: 125px;
+      margin: 15px 0 5px;
+      color: #7c7f82;
+      @include md {
+        font-size: 85px;
+      }
+      @include lg {
+        font-size: 100px;
+      }
+    }
+  }
+  &__list {
+    font-size: 19px;
+    padding-left: 0;
+    list-style-type: none;
+  }
+  &__list__item {
+    border-bottom: 1px dashed #484848;
+    line-height: 35px;
+    text-transform: capitalize;
+      &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+
+.page-id-39 {
+  .services-section__header {
+    display: none;
+  }
+  .services-section {
+    padding-top: 40px;
+  }
+}

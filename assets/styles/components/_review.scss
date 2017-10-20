@@ -1,0 +1,22 @@
+.review {
+  padding: 40px 40px 60px;
+  background-color: #ffba50;
+  &__details {
+    margin: 0 auto;
+    font-size: 18px;
+    max-width: 600px;
+    @include xl {
+      max-width: 800px;
+    }
+    &__author {
+      display: inline-block;
+      margin: 10px 0 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+  &__header {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+}

@@ -1,0 +1,82 @@
+.hero {
+  height: 100vh;
+  background-color: $light-blue;
+  //background-image: url('../../assets/images/hero/bright.jpg');
+  background-position: 67%;
+  background-size: cover;
+  @include lg {
+    background-position: center;
+  }
+  &__text {
+    text-align: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    width: 100%;
+    padding: 0 20px;
+    @include md {
+      width: 74%;
+    }
+    @include lg {
+      width: 60%;
+    }
+    @include xxl {
+      width: 44%;
+    }
+    &__h1 {
+      font-size: 32px;
+      font-weight: 400;
+      padding: 0 0 25px;
+      @include md {
+        font-size: 54px;
+      }
+      @include xxl {
+
+      }
+    }
+    &__h2 {
+      font-size: 24px;
+      padding: 0 0 15px;
+      @include md {
+        font-size: 40px;
+      }
+      @include xxl {
+        font-size: 44px;
+      }
+      &--color {
+        color: $orange;
+      }
+    }
+    &__h3 {
+      font-size: 18px;
+      font-weight: 400;
+      width: 75%;
+      @include xxl {
+        font-size: 20px;
+      }
+    }
+    &__btn {
+      border: 2px solid #393939;
+      padding: 8px;
+      margin-top: 5px;
+      text-transform: uppercase;
+      font-size: 17px;
+      font-weight: 400;
+      font-family: 'Montserrat';
+      display: inline-block;
+      transition: 0.3s;
+      &:hover {
+        text-decoration: none;
+        background-color: #383838;
+        color: #fff;
+      }
+    }
+  }
+  &__image {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+  }
+}

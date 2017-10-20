@@ -1,0 +1,200 @@
+.nav-home {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  // background-color: $blue;
+  padding: 10px 0;
+  height: 60px;
+  z-index: 1;
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  li {
+    list-style-type: none;
+    padding: 20px;
+  }
+}
+
+.page-id-26 {
+  .nav-home {
+    background-color: $blue;
+  }
+}
+
+.site-header__logo {
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 600;
+  @include lg {
+    padding: 10px 10px 10px 100px;
+  }
+  a {
+    color: #fff;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+// overlay
+.overlay-content {
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  height: 100%;
+  background-color: #3eb6ac;
+  position: fixed;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.mobile-menu-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* The navigation links inside the overlay */
+.menu-primary-nav-container {
+  visibility: hidden;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+ a {
+    padding: 8px;
+    text-decoration: none;
+    text-transform: lowercase;
+    font-size: 36px;
+    color: #fbfbfb;;
+    display: block; /* Display block instead of inline */
+  }
+}
+
+.mobile-menu-visible {
+  visibility: visible;
+}
+
+/* When you mouse over the navigation links, change their color */
+.menu-primary-nav-container a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .menu-primary-nav-container a {font-size: 20px}
+}
+
+// menu button
+.menu-icon {
+    width: 20px;
+    height: 19px;
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    right: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      transform-origin: 0 0;
+      transition: transform .3s ease-out;
+    }
+
+    &__middle {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      transition: all .3s ease-out;
+      transform-origin: 0 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      transform-origin: 0 100%;
+      transition: transform .3s ease-out;
+    }
+
+    @include xl {
+      display: none;
+    }
+  }
+
+  .menu-icon--close-x {
+    &::before {
+      transform: rotate(45deg) scaleX(1.25);
+    }
+
+    .menu-icon__middle {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    &::after {
+      transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+    }
+  } // menu button
+
+
+@include xl {
+  .overlay-content {
+    width: 0;
+    height: 0;
+    visibility: visible;
+    opacity: 1;
+    position: static;
+    left: auto;
+    top: auto;
+  }
+    .menu-primary-nav-container {
+      display: block;
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 60px;
+      top: 0px;
+      left: inherit;
+      visibility: visible;
+      transform: none;
+      a {
+        font-size: 20px;
+        padding: 8px 0;
+      }
+    }
+
+    #menu-primary-nav {
+      float: right;
+      margin: 0;
+      padding: 10px 72px 10px 10px;
+      .nav-home li {
+        display: inline-block;
+      }
+    }
+
+    .nav-home li {
+      display: inline-block;
+      padding: 0 28px 0 0;
+    }
+  }

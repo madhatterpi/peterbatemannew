@@ -1,0 +1,29 @@
+.button {
+  border: none;
+  padding: 12px;
+  text-transform: uppercase;
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.button {
+  &__projects {
+    margin: 0 5px;
+    background-color: $blue;
+    color: #fff;
+    font-size: 17px;
+    &:hover {
+      background-color: darken($blue, 5%);
+      text-decoration: none;
+      color: #fff;
+    }
+    a {
+      color: #fff;
+    }
+
+  }
+}

@@ -1,0 +1,121 @@
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  @include md {
+    flex-direction: row;
+  }
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0 60px;
+  background-color: $yellow;
+  @include md {
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 600;
+  }
+  &__container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include lg {
+      width: 75%;
+    }
+  }
+  &__header {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 35px;
+    @include md {
+      padding-bottom: 40px;
+    }
+  }
+  &__intro {
+    padding: 0 30px 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    @include md {
+      padding: 0 50px 20px;
+    }
+  }
+  &__icons {
+    margin-top: 5px;
+    .fa {
+      font-size: 30px;
+      &:first-of-type {
+        margin-right: 10px;
+      }
+    }
+
+  }
+}
+
+.contact-form {
+  background-color: #e8e8e8;
+  padding: 50px 0;
+  @include md {
+    flex: 1 1 0;
+  }
+  &__header {
+    text-transform: uppercase;
+    padding-bottom: 20px;
+  }
+}
+
+//---- contact form 7 ----//
+
+#wpcf7-f36-o1 {
+  text-align: center;
+  label {
+    display: block;
+  }
+  button, input, select, textarea, submit {
+    padding: 10px;
+    width: 90%;
+    border: none;
+    font-family: 'Montserrat';
+    font-size: 16px;
+    @include md {
+      width: 80%;
+    }
+    @include lg {
+      width: 70%;
+    }
+  }
+  .wpcf7-submit {
+    margin: 0 auto;
+    margin-top: 22px;
+    display: block;
+    background-color: $grey;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    height: 50px;
+    font-size: 18px;
+    &:hover {
+      background-color: darken($grey,5%);
+    }
+  }
+}
+
+
+
+.wpcf7-submit:hover {
+  background-color: lighten($grey, 4%);
+}
+
+span.wpcf7-not-valid-tip {
+    color: $yellow;
+  }
+
+  div.wpcf7-mail-sent-ng {
+    border: 2px solid $yellow;
+}

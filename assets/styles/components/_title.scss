@@ -1,0 +1,42 @@
+.title {
+   padding: 80px 20px;
+   text-align: center;
+   color: white;
+   // background-color: $orange;
+   overflow: hidden;
+   @include md {
+     padding: 60px 120px 120px;
+   }
+   img {
+     position: absolute;
+     top: 0;
+     left: 0;
+     max-width: 100%;
+     height: auto;
+     z-index: -2;
+   }
+   &__overlay {
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     background-image: linear-gradient(to bottom right,#0c293a,#4e2e29);
+     opacity: .6;
+     z-index: -1;
+   }
+   &__page-title {
+     font-size: 45px;
+     margin-bottom: 30px;
+     letter-spacing: 3px;
+   }
+   &__page-subheader {
+     font-size: 18px;
+   }
+}
+
+.contact {
+  .title img {
+    top: -228px;
+  }
+}

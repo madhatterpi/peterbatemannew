@@ -1,0 +1,130 @@
+.portfolio {
+  padding: 50px 0 0;
+  @include md {
+
+  }
+  &__header {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 55px;
+  }
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  @include md {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.project {
+  text-align: center;
+  &__overlay {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 1s ease;
+    background-color: hsla(0, 0%, 92%, 0.75);
+    @include xl {
+      padding: 20px;
+    }
+  }
+  &__header {
+    margin-top: 0;
+    margin-bottom: 18px;
+  }
+  &__buttons {
+    padding: 25px 0 15px;
+  }
+}
+
+.project__overlay:hover {
+  opacity: 1;
+}
+
+// --- columns --- //
+
+.col {
+  display: flex;
+  background-color: $dark-grey;
+  background-clip: content-box;
+  justify-content: center;
+  align-items: center;
+  @include md {
+
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .col-one {
+    order: 0;
+  }
+  .col-two {
+    order: 1;
+  }
+  .col-three {
+    order: 3;
+  }
+  .col-four {
+    order: 2;
+  }
+  .col-five {
+    order: 4;
+  }
+  .col-six {
+    order: 5;
+  }
+}
+
+.col-md {
+  height: 350px;
+  @include md {
+    flex: 1 1 50%
+  }
+  @include lg {
+    flex: 1 1 33.333%
+  }
+  @include xxl {
+    height: 420px;
+  }
+}
+
+.col-link {
+  font-family: Lobster;
+  font-size: 50px;
+  text-transform: capitalize;
+  color: #00b6ad;
+}
+
+.page-id-41 {
+  .portfolio {
+    padding: 0;
+  }
+  .portfolio__header {
+    display: none;
+  }
+}
+
+.portfolio-container {
+  .ido, .pps {
+    background-color: whitesmoke;
+  }
+}
+
+.ido {
+  background: url("http://localhost/peterbateman/wp-content/themes/peterbateman-new/assets/images/portfolio/ido-mac1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.pps {
+  background-image: url("http://localhost/peterbateman/wp-content/themes/peterbateman-new/assets/images/portfolio/pps-mac.png");
+  background-size: cover;
+  background-position: center;
+}

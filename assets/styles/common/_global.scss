@@ -1,0 +1,64 @@
+h1, h2, h3, h4 {
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 500;
+  margin: 20px 0 10px;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+@include lg {
+  h1, h2, h3, h4 {
+
+  }
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Pontano Sans',sans-serif;
+  letter-spacing: 0.04em;
+  color: #383838;
+  margin: 0;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+p {
+  margin: 0 0 10px;
+  line-height: 27px;
+}
+
+a {
+  color: #383838;
+  text-decoration: none;
+  &:hover {
+    color: #383838;
+    text-decoration: underline;
+  }
+}
+
+.header {
+  color: $blue;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section {
+  padding: 40px 20px 60px;
+}
+
+.icon {
+  height: 150px;
+  width: 150px;
+  background-color: #BDC3C7;
+  border-radius: 75px;
+  margin: 25px auto;
+}
+
+.space {
+  height: 400px;
+}

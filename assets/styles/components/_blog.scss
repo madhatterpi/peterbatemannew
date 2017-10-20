@@ -1,0 +1,71 @@
+.blog {
+  background-color: $light-blue;
+}
+
+.blog-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  background-color: $light-blue;
+  @include md {
+    flex-direction: row;
+    max-width: 100%;
+  }
+  @include lg {
+    max-width: 90%;
+  }
+  @include xl {
+    max-width: 80%;
+  }
+  &__header {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+  &__article {
+    max-width: 360px;
+    margin: 0 auto;
+    flex: 1 1 0;
+    background-color: #fff;
+    margin-bottom: 40px;
+    background-clip: content-box;
+    @include md {
+      max-width: 225px;
+    }
+    @include lg {
+      max-width: 360px;
+      margin: 20px
+    }
+  }
+  &__details {
+    padding: 15px;
+    line-height: 24px;
+  }
+  &__title {
+    font-size: 25px;
+    margin: 10px 0 15px;
+    @include lg {
+      font-size: 18px;
+    }
+    a {
+      &:hover {
+        text-decoration: none;
+        color: lighten($dark-text, 20%);
+      }
+    }
+  }
+  &__image {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__entry-summary {
+    line-height: 24px;
+  }
+
+}
