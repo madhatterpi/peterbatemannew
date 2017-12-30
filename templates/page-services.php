@@ -7,35 +7,67 @@
     <div class="services-section__row skills">
       <div class="skills__column">
         <h2 class="header skills__column__header">web design</h2>
-        <i class="fa fa-list-alt sr-icon sr-icon--first" aria-hidden="true"></i>
+        <i class="fa fa-desktop fa-fw sr-icon sr-icon--first" aria-hidden="true"></i>
           <ul class="skills__list">
-            <li class="skills__list__item"><a href="#">responsive design</a></li>
-            <li class="skills__list__item"><a href="#">graphic design</a></li>
-            <li class="skills__list__item"><a href="#">logo design</a></li>
-            <li class="skills__list__item"><a href="#">wordpress themes</a></li>
-            <li class="skills__list__item"><a href="#">images</a></li>
+            <?php get_template_part('templates/content', 'services-titles'); ?>
           </ul>
       </div>
       <div class="skills__column">
         <h2 class="header skills__column__header">development</h2>
-        <i class="fa fa-cog sr-icon sr-icon--second" aria-hidden="true"></i>
+        <i class="fa fa-cog fa-fw sr-icon sr-icon--second" aria-hidden="true"></i>
           <ul class="skills__list">
-            <li class="skills__list__item"><a href="#">web development</a></li>
-            <li class="skills__list__item"><a href="#">modern workflow</a></li>
-            <li class="skills__list__item"><a href="#">plugin development</a></li>
-            <li class="skills__list__item"><a href="#">e-commerce</a></li>
-            <li class="skills__list__item"><a href="#">hosting</a></li>
+            <?php
+
+            $args = array('category_name' => 'development');
+            $category_posts = new WP_Query($args);
+
+            if($category_posts->have_posts()) :
+            while($category_posts->have_posts()) :
+            $category_posts->the_post();
+            ?>
+
+            <li class="skills__list__item"><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></li>
+
+
+            <?php
+            endwhile;
+            else:
+            ?>
+
+            Oops, there are no posts.
+
+            <?php
+            endif;
+            ?>
           </ul>
       </div>
       <div class="skills__column">
         <h2 class="header skills__column__header">promotion</h2>
-        <i class="fa fa-bar-chart sr-icon sr-icon--third" aria-hidden="true"></i>
+        <i class="fa fa-bar-chart fa-fw sr-icon sr-icon--third" aria-hidden="true"></i>
           <ul class="skills__list">
-            <li class="skills__list__item"><a href="#">SEO</a></li>
-            <li class="skills__list__item"><a href="#">user engagement</a></li>
-            <li class="skills__list__item"><a href="#">Google Analytics</a></li>
-            <li class="skills__list__item"><a href="#">performance analysis</a></li>
-            <li class="skills__list__item"><a href="#">Google Adwords</a></li>
+            <?php
+
+            $args = array('category_name' => 'promotion');
+            $category_posts = new WP_Query($args);
+
+            if($category_posts->have_posts()) :
+            while($category_posts->have_posts()) :
+            $category_posts->the_post();
+            ?>
+
+            <li class="skills__list__item"><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></li>
+
+
+            <?php
+            endwhile;
+            else:
+            ?>
+
+            Oops, there are no posts.
+
+            <?php
+            endif;
+            ?>
           </ul>
       </div>
     </div>

@@ -76,6 +76,10 @@
 
 })(jQuery); // Fully reference jQuery after this point.
 
+
+
+window.console && console.log('foo');
+
 jQuery(function($) {
   window.sr = ScrollReveal();
 sr.reveal('.sr-icon', {

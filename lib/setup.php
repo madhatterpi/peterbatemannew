@@ -94,7 +94,6 @@ function display_sidebar() {
 }
 
 
-
 /**
  * Theme assets
  */
@@ -106,6 +105,7 @@ function assets() {
   }
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+
   wp_register_script( 'font-awesome', 'https://use.fontawesome.com/880aaf2fa6.js', null, true );
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);

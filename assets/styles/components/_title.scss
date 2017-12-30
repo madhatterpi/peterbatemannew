@@ -1,11 +1,17 @@
 .title {
-   padding: 80px 20px;
+   padding: 100px 20px;
    text-align: center;
    color: white;
    // background-color: $orange;
    overflow: hidden;
-   @include md {
-     padding: 60px 120px 120px;
+   @include lg {
+     padding: 120px;
+   }
+   @include xl {
+     padding: 140px;
+   }
+   @include xxl {
+     padding: 180px;
    }
    img {
      position: absolute;
@@ -21,7 +27,8 @@
      right: 0;
      bottom: 0;
      left: 0;
-     background-image: linear-gradient(to bottom right,#0c293a,#4e2e29);
+    //  background-image: linear-gradient(to bottom right,#0c293a,#4e2e29);
+     background-color: rgba(0,0,0.5,0.7);
      opacity: .6;
      z-index: -1;
    }
@@ -29,6 +36,10 @@
      font-size: 45px;
      margin-bottom: 30px;
      letter-spacing: 3px;
+     font-weight: 500;
+     @include xl {
+       font-size: 54px;
+     }
    }
    &__page-subheader {
      font-size: 18px;
@@ -38,5 +49,13 @@
 .contact {
   .title img {
     top: -228px;
+  }
+}
+
+.post {
+  .title__overlay {
+    background-image: none;
+    background-color: #6e7a80;
+    opacity: 1;
   }
 }

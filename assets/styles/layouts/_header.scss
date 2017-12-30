@@ -1,5 +1,5 @@
 .nav-home {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   // background-color: $blue;
@@ -18,12 +18,12 @@
 
 .page-id-26 {
   .nav-home {
-    background-color: $blue;
+    // background-color: $blue;
   }
 }
 
 .site-header__logo {
-  font-size: 20px;
+  font-size: 26px;
   padding: 10px;
   font-weight: 600;
   @include lg {
@@ -31,6 +31,7 @@
   }
   a {
     color: #fff;
+
     &:hover {
       text-decoration: none;
     }
@@ -76,6 +77,9 @@
     font-size: 36px;
     color: #fbfbfb;;
     display: block; /* Display block instead of inline */
+    @include xl {
+      // color: $dark-text;
+    }
   }
 }
 
@@ -170,7 +174,6 @@
   }
     .menu-primary-nav-container {
       display: block;
-      position: fixed;
       top: 0;
       right: 0;
       height: 60px;

@@ -1,0 +1,15 @@
+{
+  "name": "sage",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    "Ben Word <ben@benword.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "scrollreveal": "3.3.6",
+    "normalize-css": "^7.0.0",
+    "luxbar": "^0.3.2"
+  },
+  "overrides": {}
+}

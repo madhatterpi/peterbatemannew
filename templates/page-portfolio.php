@@ -27,7 +27,7 @@
         </div>
       </div>
     </div>
-    <div class="col col-md col-two">
+    <div class="col col-md col-two" onclick="location.href='#';" target="_blank" style="cursor:pointer;">
       <p class="col-link">design</p>
     </div>
     <div class="col col-md col-three project pps">
@@ -54,7 +54,7 @@
     <div class="col col-md col-four">
       <p class="col-link">performance</p>
     </div>
-    <div class="col col-md col-five project">
+    <div class="col col-md col-five project" onclick="location.href='#';" target="_blank" style="cursor:pointer;">
       <div class="project__overlay">
         <div class="project__overlay__stuff">
 
@@ -75,7 +75,7 @@
         </div>
       </div>
     </div>
-    <div class="col col-md col-six">
+    <div class="col col-md col-six" onclick="location.href='#';" target="_blank" style="cursor:pointer;">
       <p class="col-link">engaging</p>
     </div>
   </div>

@@ -4,6 +4,7 @@
   margin: 0 auto;
   padding: 40px 20px 60px;
   font-size: 18px;
+
   @include lg {
     max-width: 800px;
   }
@@ -13,4 +14,11 @@
   &__header {
     margin-bottom: 35px;
   }
+  &__text {
+    text-align: left;
+  }
+}
+
+.welcome-container {
+  background-color: #fff;
 }

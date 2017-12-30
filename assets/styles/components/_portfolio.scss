@@ -1,5 +1,4 @@
 .portfolio {
-  padding: 50px 0 0;
   @include md {
 
   }
@@ -31,13 +30,25 @@
     opacity: 0;
     transition: 1s ease;
     background-color: hsla(0, 0%, 92%, 0.75);
+
     @include xl {
       padding: 20px;
+    }
+    &__stuff {
+      opacity: 0;
+      transition: 0.8s;
+      position: relative;
     }
   }
   &__header {
     margin-top: 0;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+    // margin-bottom: 130px;
+    transition: 1s;
+    // position: absolute;
+    // top: -150%;
+    // left: 50%;
+    // transform: translateX(-50%) translateY(-50%);
   }
   &__buttons {
     padding: 25px 0 15px;
@@ -48,6 +59,14 @@
   opacity: 1;
 }
 
+.move {
+  // margin-bottom: 18px;
+  top: -50%
+}
+
+.visible {
+  opacity: 1;
+}
 // --- columns --- //
 
 .col {

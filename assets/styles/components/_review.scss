@@ -20,3 +20,81 @@
     margin-bottom: 35px;
   }
 }
+
+/* slider
+----------------------*/
+
+.slide-mask {
+  position: relative;
+  overflow: hidden;
+  height: 310px;
+  list-style: none;
+  @include md {
+    height: 210px;
+  }
+  @include xl {
+    height: 190px;
+  }
+}
+.slide-group {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  padding-left: 0px;
+}
+.slide {
+  height: 310px;
+  list-style: none;
+  @include md {
+    height: 210px;
+  }
+  @include xl {
+    height: 190px;
+  }
+}
+
+/* nav
+----------------------*/
+.slide-nav {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+.slide-nav ul {
+	margin: 0;
+	padding: 0;
+  list-style: none;
+}
+.slide-nav li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: lighten($grey-background, 10%);
+  cursor: pointer;
+  margin-left: .7em;
+  border-radius: 12px;
+}
+.slide-nav li.current {
+	background: $grey-background;
+}
+
+.bullet {
+  height: 15px;
+  width: 15px;
+  background-color: $grey-background;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 9px;
+  display: inline-block;
+  position: relative;
+  &:before {
+    position:absolute;
+    content:'';
+    top:-5px;
+    right:-5px;
+    left:-5px;
+    bottom:-5px;
+    z-index:40;
+  }
+}
