@@ -1,35 +1,37 @@
-.header {
-  color: $blue;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 .services-section {
-  background: $grey-background;
   &__header {
-    margin-bottom: 35px;
+    color: $dark-text;
   }
   &__row {
     max-width: 1200px;
-    padding: 40px 20px 20px;
+    padding: 0 20px 20px;
     margin: 0 auto;
   }
   &__intro {
     text-align: center;
-    color: #fff;
-    line-height: 25px;
     font-size: 18px;
+    max-width: 900px;
+    margin: 0 auto;
     @include md {
       padding: 0 60px;
     }
+    @include lg {
+      font-size: 26px;
+      line-height: 40px;
+      padding: 40px;
+    }
   }
+}
+
+.home .services-section .services-section__intro {
+  display: none;
 }
 
 .skills {
   flex-flow: column;
   display: flex;
   margin: 0 auto;
-  padding: 40px 20px 80px;
+  padding: 0 20px 20px;
   @include md {
         flex-flow: row;
     }
@@ -39,13 +41,13 @@
     padding: 20px;
     flex: 1 1 0;
     border-radius: 2px;
-    margin-bottom: 40px;
-    @include md {
+    @include lg {
       margin: 0 20px;
       }
     &__header {
-      font-size: 30px;
+      font-size: 32px;
       white-space: nowrap;
+      margin: 25px 0 20px;
       @include md {
         font-size: 20px;
       }
@@ -54,14 +56,12 @@
       }
     }
     .sr-icon {
-      font-size: 125px;
-      margin: 15px 0 5px;
-      color: #7c7f82;
+      font-size: 115px;
+      margin: 15px 0;
+      color: $blue;
+      // opacity: 0;
       @include md {
         font-size: 85px;
-      }
-      @include lg {
-        font-size: 100px;
       }
     }
   }
@@ -74,6 +74,7 @@
     border-bottom: 1px dashed #484848;
     line-height: 35px;
     text-transform: capitalize;
+    margin-bottom: 8px;
       &:last-of-type {
       border-bottom: none;
     }

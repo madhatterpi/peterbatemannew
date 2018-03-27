@@ -21,7 +21,6 @@
   }
   &__header {
     text-align: center;
-    margin-bottom: 35px;
   }
   &__article {
     max-width: 360px;
@@ -64,8 +63,4 @@
       height: auto;
     }
   }
-  &__entry-summary {
-    line-height: 24px;
-  }
-
 }

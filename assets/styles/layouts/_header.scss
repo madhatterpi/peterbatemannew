@@ -2,10 +2,11 @@
   position: absolute;
   top: 0;
   width: 100%;
-  // background-color: $blue;
   padding: 10px 0;
-  height: 60px;
-  z-index: 1;
+  z-index: 2;
+  @include lg {
+    padding: 25px 0;
+  }
   ul {
     padding: 0;
     list-style-type: none;
@@ -13,25 +14,31 @@
   li {
     list-style-type: none;
     padding: 20px;
+    @include smla {
+      padding: 6px;
+    }
   }
 }
 
-.page-id-26 {
-  .nav-home {
-    // background-color: $blue;
+.header-container {
+  @include md {
+    position: relative;
+    margin: 0 50px;
+  }
+  @include xxl {
+    margin: 0 150px;
   }
 }
 
 .site-header__logo {
-  font-size: 26px;
+  font-size: 20px;
   padding: 10px;
   font-weight: 600;
-  @include lg {
-    padding: 10px 10px 10px 100px;
-  }
+  float: left;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   a {
     color: #fff;
-
     &:hover {
       text-decoration: none;
     }
@@ -39,7 +46,7 @@
 }
 
 // overlay
-.overlay-content {
+.main-menu {
   transition: 0.5s;
   visibility: hidden;
   opacity: 0;
@@ -48,12 +55,21 @@
   position: fixed;
   text-align: center;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
   position: fixed;
   z-index: -1;
   left: 0;
   top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.main-menu-container {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .mobile-menu-overlay {
@@ -61,20 +77,23 @@
   opacity: 1;
 }
 
+.header-icon, .header-icon:visited, .header-icon:active {
+  color: #fff;
+  font-size: 30px;
+}
+
+.header-icon:last-of-type {
+  padding-left: 25px;
+}
+
 /* The navigation links inside the overlay */
 .menu-primary-nav-container {
   visibility: hidden;
-  display: block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+
  a {
-    padding: 8px;
     text-decoration: none;
-    text-transform: lowercase;
-    font-size: 36px;
+    text-transform: capitalize;
+    font-size: 24px;
     color: #fbfbfb;;
     display: block; /* Display block instead of inline */
     @include xl {
@@ -105,7 +124,7 @@
     z-index: 10;
     top: 20px;
     right: 15px;
-
+    cursor: pointer;
     &::before {
       content: "";
       position: absolute;
@@ -163,7 +182,7 @@
 
 
 @include xl {
-  .overlay-content {
+  .main-menu {
     width: 0;
     height: 0;
     visibility: visible;
@@ -173,31 +192,82 @@
     top: auto;
   }
     .menu-primary-nav-container {
-      display: block;
-      top: 0;
-      right: 0;
-      height: 60px;
-      top: 0px;
-      left: inherit;
       visibility: visible;
-      transform: none;
       a {
-        font-size: 20px;
+        font-size: 18px;
         padding: 8px 0;
+        position: relative;
       }
     }
+
+      .main-menu-container {
+        display: block;
+        right: 0;
+        height: 60px;
+        transform: none;
+      }
+
+      .icons {
+        display: none;
+      }
 
     #menu-primary-nav {
       float: right;
       margin: 0;
-      padding: 10px 72px 10px 10px;
       .nav-home li {
         display: inline-block;
       }
     }
 
+
     .nav-home li {
       display: inline-block;
-      padding: 0 28px 0 0;
+      padding: 0 40px 0 0;
     }
   }
+
+
+
+
+@include xl {
+  .menu-item  {
+    a:after {
+      content: "";
+      height: 3px;
+      width: 0;
+      display: block;
+      background-color: transparent;
+      position: absolute;
+      bottom: 0;
+    }
+    a.sayhi:after {
+      background-color: $yellow;
+      width: 100%;
+      transition: width .5s ease, background-color .5s ease;
+    }
+  }
+
+  .current-menu-item {
+    a:after {
+      content: "";
+      height: 3px;
+      width: 100%;
+      display: block;
+      background-color: $yellow;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+
+@include xxl {
+  .menu-primary-nav-container {
+    a {
+      font-size: 20px;
+    }
+  }
+}
+
+.fixed-position {
+  position: fixed;
+}

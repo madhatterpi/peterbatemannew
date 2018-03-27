@@ -1,6 +1,8 @@
 <?php
 
-$args = array('category_name' => 'web-design');
+$args = array('category_name' => 'web-design',
+              'order' => 'ASC'
+             );
 $category_posts = new WP_Query($args);
 
 if($category_posts->have_posts()) :

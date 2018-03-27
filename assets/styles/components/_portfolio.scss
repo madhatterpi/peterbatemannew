@@ -1,12 +1,18 @@
 .portfolio {
-  @include md {
-
-  }
   &__header {
     text-align: center;
-    text-transform: uppercase;
     margin-bottom: 55px;
   }
+  .portfolio-s {
+    padding: 0;
+  }
+}
+
+.portfolio-s {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 .portfolio-container {
@@ -20,6 +26,7 @@
 
 .project {
   text-align: center;
+  cursor: pointer;
   &__overlay {
     height: 100%;
     width: 100%;
@@ -27,36 +34,61 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
+    opacity: 1;
     transition: 1s ease;
-    background-color: hsla(0, 0%, 92%, 0.75);
-
+    background-color: hsla(0, 0%, 0%, 0.2);
+    color: #fff;
+    @include lg {
+      opacity: 0;
+    }
     @include xl {
       padding: 20px;
     }
     &__stuff {
-      opacity: 0;
-      transition: 0.8s;
+      transition:600ms;
       position: relative;
+      padding: 20px;
     }
   }
   &__header {
     margin-top: 0;
     margin-bottom: 20px;
-    // margin-bottom: 130px;
-    transition: 1s;
-    // position: absolute;
-    // top: -150%;
-    // left: 50%;
-    // transform: translateX(-50%) translateY(-50%);
+    position: relative;
+    transition: 600ms;
+    color: #fff;
+    @include lg {
+      top: -15px;
+    }
+  }
+  &__top {
+    top: 0;
+    opacity: 1;
   }
   &__buttons {
     padding: 25px 0 15px;
+    position: relative;
+    transition: 600ms;
+    // opacity: 0;
+    @include lg {
+      bottom: -15px;
+    }
+  }
+  &__bottom {
+    bottom: 0;
+    // opacity: 1;
+  }
+  &__meta {
+    transition: 3000ms;
+    // opacity: 0;
+  }
+  &__hi {
+    opacity: 1;
   }
 }
-
-.project__overlay:hover {
-  opacity: 1;
+@include lg {
+  .project__overlay:hover {
+    opacity: 1;
+  }
 }
 
 .move {
@@ -71,7 +103,7 @@
 
 .col {
   display: flex;
-  background-color: $dark-grey;
+  background-color: #e2e2e2;
   background-clip: content-box;
   justify-content: center;
   align-items: center;
@@ -118,7 +150,7 @@
   font-family: Lobster;
   font-size: 50px;
   text-transform: capitalize;
-  color: #00b6ad;
+  color: $blue;
 }
 
 .page-id-41 {
@@ -137,13 +169,23 @@
 }
 
 .ido {
-  background: url("http://localhost/peterbateman/wp-content/themes/peterbateman-new/assets/images/portfolio/ido-mac1.png");
+  background: url("http://localhost/peterbateman/wp-content/uploads/2018/02/jaimechris-143-md.jpg");
   background-size: cover;
   background-position: center;
 }
 
 .pps {
-  background-image: url("http://localhost/peterbateman/wp-content/themes/peterbateman-new/assets/images/portfolio/pps-mac.png");
+  background-image: url("http://localhost/peterbateman/wp-content/uploads/2018/02/Quick-Quack-Duck-md.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.beccaanndesigns {
+  background-image: url("http://localhost/peterbateman/wp-content/uploads/2018/02/beccanndesigns-md-15.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.category-portfolio {
+  font-size: 20px;
 }

@@ -1,35 +1,64 @@
 h1, h2, h3, h4 {
-  font-family: 'Montserrat',sans-serif;
-  font-weight: 600;
-  margin: 20px 0 10px;
-  font-size: 40px;
-  text-transform: uppercase;
-  margin-bottom: 35px;
+  font-family: 'Lora',sans-serif;
+  color:  $dark-blue;
+  margin: 0 0 45px;
+  font-size: 44px;
+  text-transform: capitalize;
 }
 
-@include lg {
-  h1, h2, h3, h4 {
-
+.header {
+  @include xl {
+    font-size: 50px;
   }
 }
-
 *, :after, :before {
   box-sizing: border-box;
+  transition: 300ms;
 }
 
 body {
   font-size: 16px;
   font-family: 'Pontano Sans',sans-serif;
+  font-family: 'Montserrat',sans-serif;
   letter-spacing: 0.04em;
-  color: #383838;
+  color: $dark-blue;
   margin: 0;
   max-width: 1920px;
   margin: 0 auto;
-  // padding-top: 60px;
+}
+
+.slide-nav .current {
+  background-color: #fff;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: #111;
+    border-radius: 50%;
+    outline: none;
+    border:2px solid #111;
+    transition: all .5s;
 }
 
 .title {
   position: relative;
+}
+
+.section {
+  padding: 60px 0;
+  @include md {
+    padding: 60px 20px;
+  }
+  @include xl {
+    padding: 80px 20px;
+  }
+}
+
+.row {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .white-header-text {
@@ -56,37 +85,43 @@ body {
 
 p {
   margin: 0 0 10px;
-  line-height: 25px;
+  line-height: 30px;
 }
 
 li {
-  line-height: 25px;
+  line-height: 30px;
 }
 
 a {
-  color: #383838;
+  color: $dark-blue;
   text-decoration: none;
   &:hover {
-    color: #383838;
+    color: $dark-blue;
     text-decoration: underline;
   }
 }
 
 .header {
-  color: $blue;
-  text-transform: uppercase;
   text-align: center;
-}
-
-.section {
-  padding: 40px 20px 60px;
 }
 
 .section__width {
   max-width: 800px;
   margin: 0 auto;
-  @include xl {
-    max-width: 1000px;
+  p {
+    line-height: 30px;
+    font-size: 18px;
+  }
+}
+
+.pic {
+
+
+  img {
+    margin: 0 auto;
+    width: 900px;
+    height: auto;
+    display: block;
   }
 }
 
@@ -106,6 +141,36 @@ a {
   visibility: hidden;
 }
 
+.highlight {
+  font-weight: 600;
+  color: $blue;
+}
+
 .fa-fw {
   max-width: 150px;
 }
+
+.page-intro {
+  background: #fff;
+  font-size: 18px;
+  @include lg {
+    font-size: 20px;
+    padding: 100px 20px;
+  }
+  p {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 15px;
+    @include md {
+      width: 700px;
+    }
+  }
+}
+
+#catapultCookie {
+  background: $yellow;
+}
+
+.demo a {
+    bottom: 5px !important;
+  }

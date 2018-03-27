@@ -1,6 +1,5 @@
 .review {
-  padding: 40px 40px 60px;
-  background-color: #ffba50;
+  background-color: #42464a;
   &__details {
     margin: 0 auto;
     font-size: 18px;
@@ -17,7 +16,7 @@
   }
   &__header {
     text-align: center;
-    margin-bottom: 35px;
+    color: #fff;
   }
 }
 
@@ -96,5 +95,77 @@
     left:-5px;
     bottom:-5px;
     z-index:40;
+  }
+}
+
+
+
+
+.metaslider {
+  max-height: 180px !important;
+  min-height: 330px !important;
+  margin: 0 auto !important;
+  @include md {
+    min-height: 180px !important;
+  }
+  .caption-wrap {
+    line-height: 30px !important;
+  }
+}
+
+#metaslider_143 {
+  max-height: 250px !important;
+  min-height: 250px !important;
+  @include md {
+    max-height: 250px !important;
+    min-height: 250px !important;
+  }
+}
+#metaslider_container_143 {
+  margin-bottom: 50px !important;
+  @include md {
+    margin-bottom: 90px !important;
+  }
+}
+.metaslider .slides img {
+  visibility: hidden !important;
+}
+
+.metaslider .caption {
+  padding: 5px 25px !important;
+}
+
+.metaslider .caption-wrap {
+  top: 0 !important;
+  right: 0 !important;
+  background: none !important;
+  opacity: 1 !important;
+}
+
+.flex-control-paging li a {
+  width: 13px !important;
+  height: 13px !important;
+}
+
+.flex-control-paging li a.flex-active {
+  background: #d0d0d0 !important;
+}
+
+.flex-control-paging li a:hover {
+  background: #d0d0d0 !important;
+}
+
+.flex-control-paging li a {
+    background: rgb(34, 35, 37) !important;
+  }
+
+.person {
+  font-size: 16px;
+}
+
+.flex-control-nav {
+  bottom: -126px !important;
+  @include md {
+    bottom: -30px !important;
   }
 }

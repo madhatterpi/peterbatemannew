@@ -20,6 +20,13 @@ $screen-xxl-min: 1690px;
    }
 }
 
+// Small landscape devices
+@mixin smla {
+   @media (min-width: #{$screen-sm-min}) and (max-width: 764px) and (orientation: landscape) {
+       @content;
+   }
+}
+
 // Medium devices
 @mixin md {
    @media (min-width: #{$screen-md-min}) {

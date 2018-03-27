@@ -1,5 +1,5 @@
-<div class="section blog">
-<h2 class="blog-section__header">blog</h2>
+<section class="section blog">
+<h2 class="blog-section__header header">latest from the blog</h2>
 <div class="blog-section">
 
 	<?php
@@ -30,4 +30,4 @@
 
 
 </div>
-</div>
+</section>

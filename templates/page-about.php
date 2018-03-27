@@ -1,62 +1,71 @@
-<div class="abouts">
-  <div class="abouts__section abouts__intro">
-    <h2 class="abouts__intro__header">who am I</h2>
-    <p>This is my first year as a web developer and my rates reflect this. I feel my work speaks for itself, my portfolio and reviews show that I produce high quality and visually stunning websites. This is an opportunity for you to get a great website for cheaper than if you went with a big design agency. This is my first year as a developer and I am offering very reasonable rates while I build up my portfolio. So this is a great oppportunity for you to get a great website for little cost.</p>
+<section class="abouts-wrapper section">
+<article class="abouts">
+  <div class="abouts__section abouts__intro section">
+    <div class="abouts__container">
+      <h2 class="abouts__intro__header">who am I</h2>
+      <p>I studied philsophy at university, I dabbled in graphics design and now I'm a web developer. This is my first year as a web developer but despite being relatively new to the game I believe I have the skillset to produce beautiful and high functioning websites. I'm offering low rates for the moment so this is a great opportunity to get a new website for cheaper than usual.</p>
+    </div>
   </div>
-  <div class="abouts__section abouts__why">
-    <h2 class="abouts__why__header">why work with me</h2>
-    <ul class="abouts__why__list">
-      <li class="abouts__why__list__items">I love what I do and I go to great lengths to create websites that are beautiful, fast and hit the brief</li>
-      <li class="abouts__why__list__items">A huge amount of cost goes into maintaining websites that aren't built with best practices and a modern workflow - this is something you won't have to worry about if we work together</li>
-      <li class="abouts__why__list__items">Not being an agency means my overheads are low so I can offer great value for money</li>
-      <li class="abouts__why__list__items">I provide upfront and honest pricing, their are no hidden extras</li>
-      <li class="abouts__why__list__items">My design skills are versitile, we can make a website that is unique and shows the best of your business</li>
-      <li class="abouts__why__list__items">I have a fairly good business mind, I'm not going to bump up the cost of a website by adding loads of surpfulurs features that don't benefit your business</li>
-    </ul>
-  </div>
-</div>
 
-<div class="wrapper--blue">
+  <div class="abouts__section abouts__why section">
+    <div class="abouts__container">
+      <h2 class="abouts__why__header">why work with me</h2>
+      <ul class="abouts__why__list">
+        <li class="abouts__why__list__items">I have a passion for well written code and beautiful design</li>
+        <li class="abouts__why__list__items">I build sites with the future in mind - maintaining a site can get expensive if it isn't produced this way</li>
+        <li class="abouts__why__list__items">Upfront and honest pricing with no hidden extras</li>
+        <li class="abouts__why__list__items">Versataile design skills</li>
+        <li class="abouts__why__list__items">I have lower overheads than an agency so I offer great value for money</li>
+      </ul>
+    </div>
+
+  </div>
+
+
+<div class="wrapper--blue section">
   <div class="about-process">
     <h2 class="about-process__header">my process</h2>
     <div class="about-process__section about-process__section-left">
       <div class="about-process__section__flex">
-        <i class="fa fa-eye fa-fw about-process__section__icon" aria-hidden="true"></i>
+        <i class="fas fa-eye about-process__section__icon"></i>
         <div class="about-process__section__content">
           <h2 class="about-process__section__header">Research</h2>
-            <p>First step is for me to find out all about what you want from your website. So what you want it to look like, what sort of features it will include, how you want it to promote your business, things like this. Examples of sites you like can be helpful, as can looking at competitors and of course examples of things you don't like are also fine. The more detail we can put into this initial briefing stage the better.</p>
+            <p>The first step to a great website is setting a good brief. We need to find out what you want from the website, how it should promote your business, the general style and feel of it and how it can improve upon competitors.</p>
         </div>
       </div>
     </div>
 
     <div class="about-process__section about-process__section-right">
       <div class="about-process__section__flex">
-        <i class="fa fa-desktop fa-fw about-process__section__icon" aria-hidden="true"></i>
+        <i class="about-process__section__icon fas fa-desktop"></i>
         <div class="about-process__section__content">
           <h2 class="about-process__section__header">Design</h2>
-          <p>To keep costs low I aim to be as efficient as possible. Designing the majority of the site before building it is the way to do this but we will almost certainly do revisions and customizations as the site comes together. First, I'll create a wireframe so we can establish the general layout of the site because we need the site to be fully responsive this will include wireframes for different screen sizes. If you are happy with the layout I will design the site in more detial and create a stylesheet that will include the colour palette, fonts, and header sizes. I'll keep you involved throught this process so you can make suggestions and adjustments as we move ahead.</p>
+          <p>The most efficient way to build a website is to do almost all the designing before any code is written. An initial wireframe will be provded which will give an idea of overall layout. Then a more detailed design that includes images and fonts will be made. You will be involved throught this process so you can make suggestions and adjustments as we move ahead.</p>
         </div>
       </div>
     </div>
 
     <div class="about-process__section about-process__section-left">
       <div class="about-process__section__flex">
-        <i class="fa fa-cogs fa-fw about-process__section__icon" aria-hidden="true"></i>
+        <i class="about-process__section__icon fas fa-cogs"></i>
         <div class="about-process__section__content">
           <h2 class="about-process__section__header">Build</h2>
-          <p>I typically like to use Sage starter theme to build my sites because it is essentially a blank slate and allows the build to be very light and quick. However, if you want a site up really fast and cheap I can use a Wordpress theme, or even build the site with Wix or Squarespace. The website will be built using the latest web standards, which will give a good basis for solid SEO, and will look great on all screen sizes. Before the site goes live it will go through some tests and we will review it for errors and usability issues. And there we have it a brand new exiting website!</p>
+          <p>The build stage will vary greatly depending upon whether you want a custom Wordpress theme, a bought theme, or a Squarepsace site. Whichever you choose the site will be built with the latest coding standards and will provide a great platform to build marketing your business on. Before the site goes live it will go through rigorous testing - programatic testing and user testing.</p>
         </div>
       </div>
     </div>
 
     <div class="about-process__section about-process__section-right">
       <div class="about-process__section__flex">
-        <i class="fa fa-commenting-o fa-fw about-process__section__icon" aria-hidden="true"></i>
+        <i class="about-process__section__icon far fa-comment-alt"></i>
         <div class="about-process__section__content">
-          <h2 class="about-process__section__header">Feedback</h2>
+          <h2 class="about-process__section__header">Moving ahead</h2>
           <p>After handing over the website to you and teaching you the ins and outs of it I will remain on call for a couple of months to make sure the brief is hit and no issues got through screening. Now the site is built you want to make sure as many people in your target audience are seeing it. Fortunately a lot of the work is already done because it was built with this in mind - images are compressed, scripts are minified, no links are broken and the site is speedy. But there is always more that can be done, for instance keyword targetting, google analytics and backlinks. Let's talk about it and push the website even further.</p>
         </div>
       </div>
     </div>
+
   </div>
-  </div>
+</div>
+</article>
+</section>

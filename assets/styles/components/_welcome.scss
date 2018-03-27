@@ -2,23 +2,19 @@
   text-align: center;
   max-width: 600px;
   margin: 0 auto;
-  padding: 40px 20px 60px;
-  font-size: 18px;
-
+  font-size: 20px;
+  padding: 0 25px;
   @include lg {
     max-width: 800px;
-  }
-  @include xl {
-    padding: 60px 20px 80px;
   }
   &__header {
     margin-bottom: 35px;
   }
   &__text {
-    text-align: left;
+    // text-align: left;
   }
 }
 
 .welcome-container {
-  background-color: #fff;
+
 }

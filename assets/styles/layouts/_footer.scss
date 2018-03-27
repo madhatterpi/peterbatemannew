@@ -1,12 +1,18 @@
 .footer {
-  background-color: $dark-grey;
+  background-color: #3f4448;
   color: #fff;
   text-align: center;
   padding: 30px 0;
+  &-icon {
+    color: #fff;
+    &:hover {
+      color: #fff;
+    }
+  }
   &__social-icons {
     font-size: 30px;
     padding-bottom: 15px;
-    .fa {
+    a {
       &:first-of-type {
         padding-right: 15px;
       }

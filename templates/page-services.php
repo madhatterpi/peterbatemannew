@@ -1,7 +1,7 @@
-<div class="container-fluid services-section">
+<section class="container-fluid services-section section">
   <div class="services-section__row">
       <h2 class="header services-section__header">what I do</h2>
-      <p class="services-section__intro">Whether you need a completely new site along with a new logo or an overhaul of an e-commerce site, I have the skill set to help you produce it. A great looking site is nothing without good promotion and with knowledge of the latest Google algorithm and SEO practices I can help your site grow its user base.</p>
+      <p class="services-section__intro">Whether you need a completely new site along with a new logo or an overhaul of an e-commerce site, I have the skill set to help you produce it.</p>
     </div>
 
     <div class="services-section__row skills">
@@ -18,7 +18,9 @@
           <ul class="skills__list">
             <?php
 
-            $args = array('category_name' => 'development');
+            $args = array('category_name' => 'development',
+                          'order' => 'ASC'
+                         );
             $category_posts = new WP_Query($args);
 
             if($category_posts->have_posts()) :
@@ -47,7 +49,9 @@
           <ul class="skills__list">
             <?php
 
-            $args = array('category_name' => 'promotion');
+            $args = array('category_name' => 'promotion',
+                          'order' => 'ASC'
+                          );
             $category_posts = new WP_Query($args);
 
             if($category_posts->have_posts()) :
@@ -71,4 +75,4 @@
           </ul>
       </div>
     </div>
-</div>
+</section>

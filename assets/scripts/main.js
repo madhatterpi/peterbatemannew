@@ -78,27 +78,79 @@
 
 
 
-window.console && console.log('foo');
-
+// Scroll Reveal
 jQuery(function($) {
   window.sr = ScrollReveal();
-sr.reveal('.sr-icon', {
-  duration: 600,
-  scale: 0.3,
-  distance: '0'
-}, 200);
-sr.reveal('.portfolio-container', {
-   duration: 1000,
-   viewFactor: 0.1,
- });
 
+sr.reveal('.sr-icon', {
+  duration: 600
+});
+ sr.reveal('.about-process__section', {
+   duration: 800
+ });
 });
 
 jQuery(function($) {
+
+  if ( ($(window).width() > 768) && (window.location.href !== 'http://localhost:3000/peterbateman/blog/') ) {
+    sr.reveal('.sr-icon', {
+      duration: 800,
+      scale: 0.7,
+      distance: '0'
+    }, 200);
+
+    sr.reveal('.blog-section__article', {
+      duration: 800,
+      scale: 0.7,
+      distance: '0'
+    }, 200);
+  }
+});
+
+// Mobile Menu
+jQuery(function($) {
   $('.menu-icon').click(function() {
     $(this).toggleClass('menu-content--is-visible menu-icon--close-x');
-
-    $('.overlay-content').toggleClass('mobile-menu-overlay');
+    $('body').toggleClass("fixed-position");
+    $('.main-menu').toggleClass('mobile-menu-overlay');
     $('.menu-primary-nav-container').toggleClass('mobile-menu-visible');
+  });
+});
+
+jQuery(function($) {
+  $('.project').on('hover', function() {
+    $('.project-overlay').css('opacity', '1');
+  });
+});
+
+jQuery(function($) {
+  $('.menu-item').on('hover', function() {
+    $(this).find('a').toggleClass('sayhi');
+  });
+});
+
+//Portfolio
+jQuery(function($) {
+  $('.project__overlay').on('hover', function() {
+    $(this).children().find('h2').toggleClass('project__top');
+    $(this).children().find('.project__buttons').toggleClass('project__bottom');
+    $(this).children().find('.project__meta').toggleClass('project__hi');
+  });
+});
+
+//Scroll down project__buttons
+jQuery(function($) {
+  $(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 700, 'linear');
+  });
+});
+});
+
+//fade in navigation menu
+jQuery(function($) {
+  $(".menu-primary-nav").each(function(index) {
+      $(this).delay(400*index).fadeIn(300);
   });
 });
