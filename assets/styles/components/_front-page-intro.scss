@@ -1,0 +1,44 @@
+.intro-block__outer {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-direction: column;
+  @include md {
+    flex-direction: row;
+  }
+  @include lg {
+    padding: 25px;
+  }
+}
+
+.intro-block {
+  padding: 20px;
+}
+
+.intro-block-small {
+  flex: 1 1 40%;
+}
+
+.intro-block--large {
+  flex: 1 1 60%;
+}
+
+.intro-box {
+  background: #131f2b;
+  color: #fff;
+  padding: 50px;
+}
+
+.intro-box__text {
+  font-size: 22px;
+  line-height: 1.3em;
+}
+
+.intro-about__header {
+  font-size: 30px;
+}
+
+.intro-about__text {
+  font-size: 18px;
+}

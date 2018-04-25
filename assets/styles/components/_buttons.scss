@@ -2,29 +2,37 @@
   border: none;
   padding: 12px 16px;
   text-transform: uppercase;
+  background-color: $blue;
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  padding: 12px;
+  margin-top: 25px;
+  text-transform: uppercase;
+  font-family: 'Montserrat';
+  display: inline-block;
+  transition: 300ms ease-out;
   a {
     text-decoration: none;
   }
-  a:hover {
+  &:hover {
+    background-color: transparent;
     text-decoration: none;
+    color: $blue;
   }
 }
 
-.button {
-  &__projects {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0 5px;
-    background-color: $blue;
+.button--border {
+  border: 2px solid $blue;
+  padding: 14px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: $blue;
+  background: none;
+  &:hover {
+    border: 2px solid $blue;
+    background: $blue;
     color: #fff;
-    font-size: 17px;
-    &:hover {
-      background-color: darken($blue, 5%);
-      text-decoration: none;
-      color: #fff;
-    }
-    a {
-      color: #fff;
-    }
-
   }
 }

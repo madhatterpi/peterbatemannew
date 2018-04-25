@@ -17,6 +17,16 @@
         "scripts/customizer.js"
       ]
     },
+    "scroll-reveal-custom.js": {
+      "files": [
+        "scripts/scroll-reveal-custom.js"
+      ]
+    },
+    "fontawesome-all.js": {
+      "files": [
+        "scripts/fontawesome-all.js"
+      ]
+    },
     "jquery.js": {
       "bower": ["jquery"]
     }

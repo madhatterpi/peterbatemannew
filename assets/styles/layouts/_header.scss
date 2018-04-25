@@ -5,18 +5,29 @@
   padding: 10px 0;
   z-index: 2;
   @include lg {
-    padding: 25px 0;
+    padding: 32px 0;
   }
   ul {
     padding: 0;
     list-style-type: none;
   }
   li {
-    list-style-type: none;
-    padding: 20px;
     @include smla {
       padding: 6px;
     }
+    @include xl {
+      display: inline-block;
+      padding: 0 40px 0 0;
+    }
+  }
+}
+
+.menu-item {
+  list-style-type: none;
+  padding: 16px;
+  visibility: hidden;
+  @include xl {
+    visibility: visible;
   }
 }
 
@@ -31,17 +42,25 @@
 }
 
 .site-header__logo {
-  font-size: 20px;
-  padding: 10px;
+  font-size: 24px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
   font-weight: 600;
   float: left;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   a {
     color: #fff;
     &:hover {
       text-decoration: none;
     }
+  }
+  @include md {
+    font-size: 20px;
+  }
+  @include lg {
+    font-size: 25px;
   }
 }
 
@@ -61,6 +80,14 @@
   top: 0;
   bottom: 0;
   right: 0;
+  @include xl {
+    width: 0;
+    height: 0;
+    opacity: 1;
+    position: static;
+    left: auto;
+    top: auto;
+  }
 }
 
 .main-menu-container {
@@ -68,8 +95,15 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
+  @include xl {
+    display: block;
+    right: 0;
+    height: 60px;
+    transform: none;
+    top: auto;
+    left: auto;
+  }
 }
 
 .mobile-menu-overlay {
@@ -86,24 +120,42 @@
   padding-left: 25px;
 }
 
-/* The navigation links inside the overlay */
-.menu-primary-nav-container {
-  visibility: hidden;
-
- a {
-    text-decoration: none;
-    text-transform: capitalize;
-    font-size: 24px;
-    color: #fbfbfb;;
-    display: block; /* Display block instead of inline */
-    @include xl {
-      // color: $dark-text;
-    }
-  }
-}
 
 .mobile-menu-visible {
   visibility: visible;
+}
+
+.menu-primary-nav-container {
+  visibility: visible;
+  a {
+    font-size: 18px;
+    padding: 8px 0;
+    position: relative;
+    letter-spacing: 0.12em;
+  }
+}
+
+/* The navigation links inside the overlay */
+.menu-primary-nav-container {
+  visibility: hidden;
+  @include xl {
+   visibility: visible;
+  }
+}
+
+.menu-primary-nav-container a {
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 28px;
+  font-weight: 500;
+  color: #fbfbfb;;
+  display: block;
+  @include xl {
+    font-size: 18px;
+    padding: 8px 0;
+    position: relative;
+    letter-spacing: 0.12em;
+  }
 }
 
 /* When you mouse over the navigation links, change their color */
@@ -122,9 +174,12 @@
     height: 19px;
     position: absolute;
     z-index: 10;
-    top: 20px;
+    top: 15px;
     right: 15px;
     cursor: pointer;
+    @include lg {
+      top: 10px;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -159,7 +214,6 @@
       transform-origin: 0 100%;
       transition: transform .3s ease-out;
     }
-
     @include xl {
       display: none;
     }
@@ -180,56 +234,16 @@
     }
   } // menu button
 
-
 @include xl {
-  .main-menu {
-    width: 0;
-    height: 0;
-    visibility: visible;
-    opacity: 1;
-    position: static;
-    left: auto;
-    top: auto;
-  }
-    .menu-primary-nav-container {
-      visibility: visible;
-      a {
-        font-size: 18px;
-        padding: 8px 0;
-        position: relative;
-      }
-    }
-
-      .main-menu-container {
-        display: block;
-        right: 0;
-        height: 60px;
-        transform: none;
-      }
-
-      .icons {
-        display: none;
-      }
-
-    #menu-primary-nav {
-      float: right;
-      margin: 0;
-      .nav-home li {
-        display: inline-block;
-      }
-    }
-
-
-    .nav-home li {
-      display: inline-block;
-      padding: 0 40px 0 0;
-    }
+  .icons {
+    display: none;
   }
 
+  #menu-primary-nav {
+    float: right;
+    margin: 0;
+  }
 
-
-
-@include xl {
   .menu-item  {
     a:after {
       content: "";
@@ -241,7 +255,7 @@
       bottom: 0;
     }
     a.sayhi:after {
-      background-color: $yellow;
+      background-color: $blue;
       width: 100%;
       transition: width .5s ease, background-color .5s ease;
     }
@@ -253,7 +267,7 @@
       height: 3px;
       width: 100%;
       display: block;
-      background-color: $yellow;
+      background-color: $blue;
       position: absolute;
       bottom: 0;
     }
@@ -263,11 +277,12 @@
 @include xxl {
   .menu-primary-nav-container {
     a {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 }
 
 .fixed-position {
   position: fixed;
+  width: 100%;
 }

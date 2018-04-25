@@ -1,28 +1,30 @@
 .review {
-  background-color: #42464a;
-  &__details {
-    margin: 0 auto;
-    font-size: 18px;
-    max-width: 600px;
-    @include xl {
-      max-width: 800px;
-    }
-    &__author {
-      display: inline-block;
-      margin: 10px 0 0;
-      font-size: 16px;
-      font-weight: 600;
-    }
+  background: url(../../assets/images/page-header/macrev2.jpg);
+  background-color: #131f2b;
+  background-size: cover;
+  padding: 60px 20px;
+  position: relative;
+  @include md {
+    padding: 80px 20px 110px;
   }
-  &__header {
-    text-align: center;
-    color: #fff;
+}
+
+.review__details {
+  margin: 0 auto;
+  font-size: 18px;
+  max-width: 600px;
+  @include xl {
+    max-width: 800px;
   }
+}
+
+.review__header {
+  text-align: center;
+  color: $blue;
 }
 
 /* slider
 ----------------------*/
-
 .slide-mask {
   position: relative;
   overflow: hidden;
@@ -98,9 +100,6 @@
   }
 }
 
-
-
-
 .metaslider {
   max-height: 180px !important;
   min-height: 330px !important;
@@ -114,19 +113,24 @@
 }
 
 #metaslider_143 {
-  max-height: 250px !important;
-  min-height: 250px !important;
+  max-height: 380px !important;
+  min-height: 380px !important;
   @include md {
-    max-height: 250px !important;
-    min-height: 250px !important;
+    max-height: 300px !important;
+    min-height: 300px !important;
   }
 }
 #metaslider_container_143 {
-  margin-bottom: 50px !important;
+  margin-bottom: 175px !important;
   @include md {
     margin-bottom: 90px !important;
   }
 }
+
+.metaslider .flex-control-nav li a {
+    margin: 0 9px !important;
+}
+
 .metaslider .slides img {
   visibility: hidden !important;
 }
@@ -143,20 +147,23 @@
 }
 
 .flex-control-paging li a {
-  width: 13px !important;
-  height: 13px !important;
+  width: 15px !important;
+  height: 15px !important;
 }
 
 .flex-control-paging li a.flex-active {
-  background: #d0d0d0 !important;
+  background: $blue !important;
+  &:hover {
+    background: $blue !important;
+  }
 }
 
 .flex-control-paging li a:hover {
-  background: #d0d0d0 !important;
+  background: lighten(rgb(34, 35, 37), 5%) !important;
 }
 
 .flex-control-paging li a {
-    background: rgb(34, 35, 37) !important;
+    background: $blue !important;
   }
 
 .person {

@@ -1,84 +1,111 @@
-.abouts-wrapper {
-  background-color: #fff;
-  padding: 0;
-}
-
 .abouts {
   font-size: 18px;
-  &__container {
+}
+
+.why-section {
+  background-color: $light-blue;
+}
+
+.why-section__header {
+  line-height: 1.2em;
+    @include lg {
+      width: 270px;
+      font-size: 47px;
+      margin: 0 40px 0;
+   }
+}
+
+.why-section__list {
+  padding-left: 25px;
+  list-style: none;
+  li {
+    padding-bottom: 28px;
+    padding-left: 1em;
+    &::before {
+      color: $blue;
+      content: "\2022";
+      font-size: 3em;
+      display: inline-block;
+      margin-left: -1em; /* same as padding-left set on li */
+      width: 1em;
+      position: relative;
+      bottom: -7px;
+      left: 10px;
+    }
+  }
+}
+
+.container--about {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @include lg {
     max-width: 800px;
-    margin: 0 auto;
-    padding: 25px;
-    @include xl {
-      max-width: 900px;
-    }
+    flex-direction: row;
   }
-  &__section {
-    &__header {
-      font-size: 34px;
-    }
+}
+
+.about-me__text {
+  padding-top: 20px;
+  @include lg {
+    padding: 0;
   }
-  &__intro {
-  }
-  &__why {
-    background-color: $light-blue;
-    &__list {
-      padding-left: 25px;
-      &__items {
-        padding-bottom: 20px;
-      }
+}
+
+.header--about {
+  position: relative;
+  &:after {
+    content: "";
+    height: 6px;
+    width: 25%;
+    display: block;
+    background-color: #1ae4d3;
+    position: absolute;
+    bottom: -30px;
+    left: 5px;
+    @include lg {
+      bottom: -45px;
     }
   }
 }
 
-.wrapper--blue {
-
+.big {
+  @include lg {
+    font-size: 54px;
+  }
 }
-.about-process {
+
+.my-process__header {
+   font-size: 32px;
+   color: $blue;
+}
+
+.my-process__section {
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 40px;
+  @include md {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+}
+
+.my-process .container {
   max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px 60px;
-  text-align: center;
-  @include xl {
-    max-width: 1000px;
-  }
-  &__header {
-    @include md {
-      text-align: center;
-      margin-bottom: 55px;
-    }
-  }
-  &__section {
-    &__flex {
-      display: flex;
-      flex-direction: column;
-      @include md {
-        flex-direction: row;
-        align-items: center;
-        margin-bottom: 40px;
-      }
-    }
-    &__header {
-      font-size: 32px;
-    }
-    &__content {
-      margin-bottom: 80px;
-      @include md {
-        text-align: left;
-        padding: 15px 50px;
-      }
-    }
-    &-right {
+}
 
-    }
-    .fa {
-      font-size: 150px;
-    }
-    &__icon {
-      font-size: 100px;
-      margin: 0 auto;
-      margin-bottom: 20px;
-      margin-top: 20px;
-    }
+.my-process__icon {
+  font-size: 125px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.my-process__content {
+  text-align: center;
+  @include md {
+    text-align: left;
+    padding: 15px 50px;
   }
 }

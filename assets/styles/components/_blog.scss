@@ -2,13 +2,20 @@
   background-color: $light-blue;
 }
 
+.home {
+  .blog {
+    background-color: $light-blue;
+    padding: 60px 20px;
+  }
+}
+
 .blog-section {
   display: flex;
   flex-direction: column;
-  max-width: 90%;
   justify-content: space-evenly;
   margin: 0 auto;
   background-color: $light-blue;
+  max-width: 90%;
   @include md {
     flex-direction: row;
     max-width: 100%;

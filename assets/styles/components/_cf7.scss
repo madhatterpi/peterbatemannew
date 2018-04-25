@@ -1,0 +1,47 @@
+//---- contact form 7 ----//
+
+.wpcf7 {
+  text-align: center;
+  label {
+    display: block;
+  }
+  button, input, select, textarea, submit {
+    padding: 22px;
+    width: 100%;
+    border: none;
+    font-family: 'Montserrat';
+    font-size: 17px;
+    font-weight: 600;
+    background: #f1f1f1;
+    letter-spacing: 0.05em;
+  }
+  .wpcf7-submit {
+    margin: 0 auto;
+    margin-top: 22px;
+    display: block;
+    background-color: #1f4561;
+    border: none;
+    text-transform: uppercase;
+    padding: 15px;
+    cursor: pointer;
+    height: 70px;
+    font-size: 21px;
+    font-weight: 500;
+    color: white !important;
+    &:hover {
+      background-color: darken(#1f4561,5%);
+    }
+  }
+}
+
+.wpcf7 button, input, select, textarea {
+  color: $dark-grey !important;
+}
+
+span.wpcf7-not-valid-tip {
+    color: $yellow;
+  }
+
+  div.wpcf7-mail-sent-ng {
+    border: 2px solid $yellow;
+}

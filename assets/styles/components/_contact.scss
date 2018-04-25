@@ -1,122 +1,46 @@
-.contact-wrapper {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  @include md {
-    flex-direction: row;
+.contact-page {
+  font-size: 17px;
+  text-align: center;
+}
+
+.contact-details__outer {
+  background: #f1f1f1;
+}
+
+.contact-details__inner {
+  @include xl {
+    display: flex;
+    justify-content: center;
   }
 }
 
-.contact-details {
+.contact-options {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 0 60px;
-  background-color: $yellow;
+  margin: 30px;
   @include md {
-    flex: 1 1 0;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    font-weight: 600;
-  }
-  &__container {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    @include lg {
-      width: 75%;
-    }
-  }
-  &__header {
-    margin-bottom: 35px;
-    @include md {
-      padding-bottom: 40px;
-    }
-  }
-  &__intro {
-    padding: 0 30px 20px;
-    text-align: center;
-    font-weight: 600;
-    font-size: 18px;
-    @include md {
-      padding: 0 50px 20px;
-    }
-  }
-  &__links {
-    margin-bottom: 15px;
-  }
-  &__icons {
-    margin-top: 5px;
-    a {
-      font-size: 30px;
-      &:first-of-type {
-        margin-right: 10px;
-      }
-    }
-
   }
 }
 
-.contact-form {
-  background-color: #e8e8e8;
-  padding: 50px 0;
-  @include md {
-    flex: 1 1 0;
-  }
-  &__header {
-    text-transform: uppercase;
-    padding-bottom: 20px;
-  }
-}
-
-//---- contact form 7 ----//
-
-.wpcf7 {
-  text-align: center;
-  label {
-    display: block;
-  }
-  button, input, select, textarea, submit {
-    padding: 10px;
-    width: 90%;
-    border: none;
-    font-family: 'Montserrat';
-    font-size: 16px;
-    @include md {
-      width: 80%;
-    }
-    @include lg {
-      width: 70%;
-    }
-  }
-  .wpcf7-submit {
-    margin: 0 auto;
-    margin-top: 22px;
-    display: block;
-    background-color: $grey;
-    border: none;
-    text-transform: uppercase;
-    color: white;
-    padding: 15px;
+.contact-options__link {
+  &:hover {
+    color: $blue;
     cursor: pointer;
-    height: 50px;
-    font-size: 18px;
-    font-weight: 500;
-    &:hover {
-      background-color: darken($grey,5%);
-    }
   }
 }
 
-.wpcf7-submit:hover {
-  background-color: lighten($grey, 4%);
+.contact-options__icon {
+  margin: 0 0 10px;
+  color: $blue;
+  @include md {
+    margin: 0 10px 0 0;
+  }
 }
 
-span.wpcf7-not-valid-tip {
-    color: $yellow;
-  }
-
-  div.wpcf7-mail-sent-ng {
-    border: 2px solid $yellow;
+// contact-s contact-form
+.contact-s__inner {
+  max-width: 600px;
 }

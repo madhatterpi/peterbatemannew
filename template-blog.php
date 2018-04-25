@@ -12,7 +12,7 @@
 // the query
 $the_query = new WP_Query( array(
 	 'category_name' => 'blog',
-	 'posts_per_page' => 3,
+	 'posts_per_page' => 6,
 	 "orderby" => "date"
  )); ?>
 

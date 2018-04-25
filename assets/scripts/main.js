@@ -77,36 +77,6 @@
 })(jQuery); // Fully reference jQuery after this point.
 
 
-
-// Scroll Reveal
-jQuery(function($) {
-  window.sr = ScrollReveal();
-
-sr.reveal('.sr-icon', {
-  duration: 600
-});
- sr.reveal('.about-process__section', {
-   duration: 800
- });
-});
-
-jQuery(function($) {
-
-  if ( ($(window).width() > 768) && (window.location.href !== 'http://localhost:3000/peterbateman/blog/') ) {
-    sr.reveal('.sr-icon', {
-      duration: 800,
-      scale: 0.7,
-      distance: '0'
-    }, 200);
-
-    sr.reveal('.blog-section__article', {
-      duration: 800,
-      scale: 0.7,
-      distance: '0'
-    }, 200);
-  }
-});
-
 // Mobile Menu
 jQuery(function($) {
   $('.menu-icon').click(function() {
@@ -133,8 +103,16 @@ jQuery(function($) {
 jQuery(function($) {
   $('.project__overlay').on('hover', function() {
     $(this).children().find('h2').toggleClass('project__top');
-    $(this).children().find('.project__buttons').toggleClass('project__bottom');
+    $(this).children().find('.button__projects').toggleClass('project__bottom');
     $(this).children().find('.project__meta').toggleClass('project__hi');
+  });
+});
+
+jQuery(function($) {
+  $('.project').on('hover', function() {
+    $(this).children().find('h2').toggleClass('project__top');
+    $(this).children().find('p').toggleClass('project__bottom');
+    $(this).children().find('.project__text').toggleClass('project__hi');
   });
 });
 
@@ -148,9 +126,28 @@ jQuery(function($) {
 });
 });
 
-//fade in navigation menu
-jQuery(function($) {
-  $(".menu-primary-nav").each(function(index) {
-      $(this).delay(400*index).fadeIn(300);
+// fade in links
+jQuery(function($) { // document ready
+
+  $("div.menu-icon").click(function() {
+    if ( $(this).hasClass("menu-content--is-visible") ) {
+
+      console.log("hi")
+
+      $(".menu-item").each(function(i) {
+        $(this).delay(150 * i).queue(function(nxt) {
+          $(this).css('visibility','visible').hide().fadeIn();
+        nxt();
+        });
+      });
+
+    } else {
+
+      $(".menu-item").css('visibility','hidden');
+
+    }
+
   });
-});
+
+
+}); // document ready

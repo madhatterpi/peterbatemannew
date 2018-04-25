@@ -1,44 +1,50 @@
-.title {
+.banner img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  height: auto;
+  z-index: -2;
+}
+
+.banner {
    text-align: center;
    color: white;
-   // background-color: $orange;
    overflow: hidden;
    min-height: 450px;
+   position: relative;
    @include md {
-     min-height: 500px;
-   }
-   img {
-     position: fixed;
-     top: 0;
-     left: 0;
-     max-width: 100%;
-     height: auto;
-     z-index: -2;
-   }
-   &__overlay {
-     position: absolute;
-     top: 0;
-     right: 0;
-     bottom: 0;
-     left: 0;
-    //  background-image: linear-gradient(to bottom right,#0c293a,#4e2e29);
-     background-color: rgba(0,0,0,0.4);
-   }
-   &__page-title {
-     font-size: 50px;
-     margin-bottom: 30px;
-     letter-spacing: 3px;
-     color: #fff;
-     @include xl {
-       font-size: 62px;
-     }
-   }
-   &__page-subheader {
-     font-size: 24px;
-     min-width: 240px;
-   }
+    min-height: 500px;
+  }
 }
-.title__page__text {
+
+.banner__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.banner__header {
+  font-size: 50px;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+  color: #fff;
+  @include xl {
+    font-size: 62px;
+  }
+}
+
+.banner__subheader {
+  font-size: 24px;
+  font-weight: 600;
+  min-width: 240px;
+  margin: 0;
+}
+
+.banner__text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -47,7 +53,7 @@
 }
 
 .contact {
-  .title img {
+  .banner img {
     top: -228px;
   }
 }
