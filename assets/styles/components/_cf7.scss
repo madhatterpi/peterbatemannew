@@ -9,27 +9,35 @@
     padding: 22px;
     width: 100%;
     border: none;
-    font-family: 'Montserrat';
+    font-family: $font-family-text;
     font-size: 17px;
-    font-weight: 600;
     background: #f1f1f1;
     letter-spacing: 0.05em;
   }
   .wpcf7-submit {
-    margin: 0 auto;
-    margin-top: 22px;
     display: block;
-    background-color: #1f4561;
-    border: none;
+    background-color: darken($blue, 20%);
     text-transform: uppercase;
-    padding: 15px;
+    padding: 12px 24px;
     cursor: pointer;
-    height: 70px;
-    font-size: 21px;
-    font-weight: 500;
-    color: white !important;
+    font-size: 22px;
+    margin-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 300ms ease-out;
+    font-weight: 700;
+    border: 2px solid $blue;
+    font-weight: 600;
+    color: $blue !important;
+    background: none;
+    width: auto;
+    @include md {
+      padding: 16px 56px;
+    }
     &:hover {
-      background-color: darken(#1f4561,5%);
+      border: 2px solid $blue;
+      background: $blue;
+      color: #fff !important;
     }
   }
 }
@@ -38,10 +46,15 @@
   color: $dark-grey !important;
 }
 
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+  border: 2px solid $warning-red;
+  padding: 0.4em 1em;
+}
+
 span.wpcf7-not-valid-tip {
-    color: $yellow;
+    color: $warning-red;
   }
 
   div.wpcf7-mail-sent-ng {
-    border: 2px solid $yellow;
+    border: 2px solid $warning-red;
 }

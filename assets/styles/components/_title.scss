@@ -29,16 +29,18 @@
 
 .banner__header {
   font-size: 50px;
-  margin-bottom: 25px;
-  letter-spacing: 3px;
+  margin-bottom: 0;
   color: #fff;
+  @include lg {
+    font-size: 60px;
+  }
   @include xl {
     font-size: 62px;
   }
 }
 
 .banner__subheader {
-  font-size: 24px;
+  font-size: 1.6em;
   font-weight: 600;
   min-width: 240px;
   margin: 0;
@@ -49,11 +51,14 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  font-family: 'Montserrat';
 }
 
-.contact {
-  .banner img {
-    top: -228px;
+.banner__website-link {
+  color: #fff;
+  margin-top: 20px;
+  display: inline-block;
+  font-size: 1.1em;
+  &:hover {
+    color: #fff;
   }
 }

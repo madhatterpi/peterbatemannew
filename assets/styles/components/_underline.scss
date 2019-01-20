@@ -1,0 +1,7 @@
+.underline {
+  transition: box-shadow .1s cubic-bezier(0.895,.03,.685,.22);
+  box-shadow: inset 0 -7px 0 0 $underline;
+  &:hover {
+    box-shadow: inset 0 -40px 0 0 $underline;
+  }
+}

@@ -1,12 +1,34 @@
 .portfolio-s {
   padding: 0;
+  margin: 60px 120px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  @include xxl {
+    max-width: 1400px;
+  }
+}
+
+.home .portfolio-s {
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  @include lg {
+    max-width: 96%;
+  }
+}
+
+.portfolio-section {
+  margin-bottom: 60px;
 }
 
 .portfolio__header {
   text-align: left;
+  font-size: 36px;
 }
 
 .portfolio-container {
+  margin: 0 5px;
   display: flex;
   flex-direction: column;
   @include md {
@@ -16,6 +38,7 @@
 }
 
 .project {
+  margin: 5px;
   text-align: center;
   cursor: pointer;
 }
@@ -23,12 +46,23 @@
 .project__subheader {
   color: #fff;
   font-size: 18px;
+  @include md {
+    font-size: 20px;
+  }
+}
+
+.project__subheader:first-letter {
+  text-transform: uppercase;
 }
 
 .project__inner {
-  position: relative;
+  position: absolute;
+  top: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project__inner::before {
@@ -38,8 +72,11 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,.05);
-  transition: background 0.3s;
+  background: rgba(0,0,0,.3);
+  transition: background .4s ease-in-out;
+  @include md {
+    background: rgba(0,0,0,.05);
+  }
 }
 
 .project__inner:hover::before {
@@ -47,13 +84,13 @@
 }
 
 .project__text {
-  position: absolute;
-  opacity: 0;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
   transition: 0.6s;
   width: 75%;
+  z-index: 1;
+  @include md {
+    opacity: 0;
+  }
 }
 
 .project__overlay__stuff {
@@ -63,14 +100,14 @@
 }
 
 .project__header {
-  font-size: 40px;
+  font-size: 34px;
   margin-top: 0;
   margin-bottom: 20px;
   position: relative;
   transition: 600ms;
   color: #fff;
-  @include lg {
-    top: -15px;
+  @include md {
+    font-size: 40px;
   }
 }
 
@@ -128,6 +165,10 @@
   background-clip: content-box;
   justify-content: center;
   align-items: center;
+  margin: 0;
+  @include lg {
+    margin: 10px 20px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -152,31 +193,35 @@
 }
 
 .col-md {
+  position: relative;
   height: 300px;
   @include md {
-    flex: 1 1 50%;
+    height: 300px;
+    flex: 0 1 calc(50% - 10px);
   }
   @include lg {
-    flex: 1 1 33.333%;
+    height: 350px;
+    flex: 0 1 calc(33.333% - 24px);
+    margin: 12px;
   }
   @include xl {
-    height: 400px;
+
+  }
+  @include xxl {
+
+  }
+}
+
+.home .col-md {
+  @include lg {
+    height: 300px;
+    flex: 0 1 calc(33.333% - 24px);
+  }
+  @include xl {
+    height: 350px;
   }
   @include xxl {
     height: 475px;
-  }
-}
-
-.col-link {
-  font-family: Lobster;
-  font-size: 50px;
-  text-transform: capitalize;
-  color: $blue;
-}
-
-.portfolio-section {
-  @include lg {
-    font-size: 18px;
   }
 }
 
@@ -184,4 +229,98 @@
   .section {
     padding: 100px 20px;
   }
+}
+
+.portfolio-intro {
+  display: flex;
+  flex-direction: column;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  @include md {
+    flex-direction: row;
+    padding: 0 25px;
+  }
+}
+
+.portfolio-intro__col {
+  @include md {
+    padding: 0 50px;
+  }
+}
+
+.portfolio-intro__col:first-of-type {
+  margin-bottom: 60px;
+  flex: 0 1 60%;
+  @include md {
+    margin-bottom: 0;
+  }
+}
+
+.portfolio-intro__col:last-of-type {
+  flex: 0 1 40%;
+}
+
+.portfolio-into__objectives {
+  display: block;
+}
+
+.bullet-line {
+  display: block;
+  background: $blue;
+  height: 2px;
+  width: 10px;
+  margin-right: 5px;
+  flex: 0 0 auto;
+}
+
+.cell {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.content-padding {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  @include xl {
+    max-width: 900px;
+  }
+}
+
+.portfolio__review {
+  margin-top: 30px;
+  font-weight: 600;
+}
+
+.col-md img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-image__container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.portfolio-website-link {
+  text-transform: capitalize;
+  padding: 20px 20px 20px 0;
+  display: flex;
+  align-items: center;
+  &:hover {
+    color: darken($dark-text, 15%);
+  }
+}
+
+.portfolio-website-link svg {
+  margin-left: 5px;
+}
+.portfolio-button__outer {
+  margin-top: 40px;
 }

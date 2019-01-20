@@ -1,6 +1,7 @@
 <div class="section">
-  <div class="section__width">
-    <?php the_content(); ?>
-  </div>
-
+    <div class="blog-row">
+      <div class="column">
+        <?php the_content(); ?>
+      </div>
+    </div>
 </div>

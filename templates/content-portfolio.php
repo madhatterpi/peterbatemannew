@@ -1,65 +1,67 @@
-<section class="portfolio-section">
+<section class="section portfolio-s">
 
-  <div class="section">
-    <div class="row">
-      <h2 class="portfolio__header">the brief</h2>
-      <p><?php the_field('portfolio-text-two'); ?></p>
-    </div>
+  <div class="portfolio-container">
+
+    <?php
+    // Portfolio array
+    $args = array (
+      'post_type'      => 'portfolio',
+      'posts_per_page' => '9',
+      'orderby'        => 'menu-order'
+    );
+
+// Portfolio query
+$portfolio_query = new WP_Query( $args ); ?>
+
+<?php if ( $portfolio_query->have_posts() ) : ?>
+
+	<!-- pagination here -->
+	<!-- the loop -->
+	<?php while ( $portfolio_query->have_posts() ) : $portfolio_query->the_post(); ?>
+    <?php
+      // Variables
+      $post_id = get_the_ID();
+      $post = get_page( $post_id );
+      $image_id = get_post_thumbnail_id();
+      $img_src = wp_get_attachment_image_url( $image_id, 'portfolio-crop' );
+      $image_alt = get_post_meta( $image_id, '_wp_attachment_image_alt', true);
+      $url = get_permalink( $post->ID );
+    ?>
+
+<a class="col-md col-one project" href=" <?php if ( get_field('meta-tags') ) {
+  echo the_permalink();
+}  ?>">
+<img src="<?php echo $img_src ?>" alt="<?php echo $image_alt ?>">
+      <div class="project__inner">
+        <div class="project__text">
+          <h2 class="project__header"><?php the_title(); ?></h2>
+          <?php if ( get_field('meta-tags') ) {
+            ?>
+            <span class="project__subheader"><?php echo get_post_meta(get_the_ID(), 'meta-tags', true); ?></span>
+            <?php
+          } else {
+            ?>
+            <span class="project__subheader">case study coming soon</span>
+            <?php
+          }
+
+           ?>
+
+        </div>
+      </div>
+
+  </a>
+  <?php $i++;
+  endwhile ?>
+	<!-- end of the loop -->
+
+	<!-- pagination here -->
+
+	<?php wp_reset_postdata(); ?>
+
+<?php else : ?>
+	<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
+
   </div>
-
-<div class="pic">
-<?php
-$image = get_field('portfolio-image-top');
-$size = 'large'; // (thumbnail, medium, large, full or custom size)
-
-if( $image ) {
-
-  echo wp_get_attachment_image( $image, $size );
-
-}
-?>
-
-<img class="portfolio-reveal" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-</div>
-
-<div class="section">
-  <div class="row">
-    <h2 class="portfolio__header">the approach</h2>
-    <p><?php the_field('portfolio-text-three'); ?></p>
-  </div>
-</div>
-
-<div class="pic">
-  <?php
-
-  $image = get_field('portfolio-image-middle');
-  $size = 'large'; // (thumbnail, medium, large, full or custom size)
-
-  if( $image ) {
-  	echo wp_get_attachment_image( $image, $size );
-  }
-  ?>
-  <img class="portfolio-reveal  box-shadow" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-</div>
-
-<div class="section padding-bottom-none">
-  <div class="row">
-    <h2 class="portfolio__header">the results</h2>
-    <p><?php the_field('portfolio-text-four'); ?></p>
-  </div>
-</div>
-
-<div class="section less-padding">
-  <div class="row">
-    <h2 class="portfolio__header">what the client said</h2>
-    <p>"<?php the_field('portfolio-text-five'); ?>"</p>
-    <a href="" class="button button--border">visit site</a>
-  </div>
-
-</div>
-
-
 </section>
-
-<?php get_template_part('templates/page', 'get-started'); ?>

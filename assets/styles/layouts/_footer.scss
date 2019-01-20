@@ -1,10 +1,16 @@
 .footer {
-  background-color: #131f2b;
+  background-color: #212123;
   color: #fff;
   padding: 50px 0 0;
+  font-size: 17px;
+  position: relative;
   @include md {
     padding: 50px 0 10px;
   }
+}
+
+.footer-block {
+  flex: 0 1 25%;
 }
 
 .footer a {
@@ -47,8 +53,8 @@
 
 .footer__header {
   font-size: 24px;
-  color: $text-light;
-  margin: 20px 0 30px;
+  color: #fff;
+  margin: 20px 0;
 }
 
 .footer__navigation {
@@ -72,12 +78,12 @@
 
 .footer__social-icons {
   font-size: 25px;
-  margin: 30px 0 20px;
+  margin: 20px 0 20px;
   display: flex;
   a {
     color: $blue;
-    &:first-of-type {
-      padding-right: 15px;
+    &:nth-of-type(-n+3) {
+      padding-right: 30px;
     }
   }
 }
@@ -92,29 +98,30 @@
     font-size: 26px;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
     margin: 20px 0 30px;
     a {
       transition: 0.8s ease-in-out;
-      color: $text-light;
+      color: #fff;
       &:hover {
         color: $blue;
       }
     }
-
   }
 }
 
-.footer__contact {
-  &__item {
+.footer__legal svg {
+  padding-right: 5px;
+}
+
+.footer__contact__item {
     display: flex;
     margin: 0 0 15px;
-    svg {
+    .fas {
       margin: 0 10px 0 0;
       font-size: 19px;
       color: $blue;
     }
-  }
   br {
    line-height: 175%;
  }
@@ -164,5 +171,28 @@
   @include md {
     flex-direction: row;
     align-items: center;
+  }
+}
+
+#ctf .ctf-item {
+  padding: 0;
+}
+
+.arrow-up {
+  width: 100px;
+  height: 65px;
+  position: absolute;
+  left: 50%;
+  top: -8%;
+  transform: translateX(-50%);
+  background: #282a2e;
+  border-radius: 25px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  svg {
+    font-size: 38px;
   }
 }

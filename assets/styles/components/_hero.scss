@@ -1,6 +1,6 @@
 .hero {
   height: 100vh;
-  background-image: url('../images/hero/setup.jpg');
+  background-image: url('../images/hero/frontpage-hero-done.jpg');
   background-size: cover;
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@
   }
   @include md {
     width: 74%;
-    padding: 0 25px;
+    padding: 0 80px;
   }
   @include xl {
     width: 60%;
@@ -32,18 +32,19 @@
 }
 
 .hero__header {
-  font-size: 34px;
+  font-size: 38px;
   padding: 0 0 10px;
   margin: 0 0 25px;
   line-height: 1.2;
   font-weight: bold;
   text-transform: inherit;
   color: #fff;
+  max-width: 650px;
   @include smla {
     margin-bottom: 0;
   }
   @include md {
-    font-size: 62px;
+    font-size: 58px;
   }
   @include xxl {
     font-size: 72px;
@@ -51,9 +52,8 @@
 }
 
 .hero__subheader {
-  font-size: 24px;
-  font-family: 'Montserrat', sans-serif;
-  padding: 0 0 15px;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
   margin-top: 20px;
   margin-bottom: 10px;
   color: $blue;
@@ -61,17 +61,18 @@
     font-size: 16px;
   }
   @include md {
-    font-size: 30px;
+    font-size: 32px;
+    padding: 0 0 15px;
   }
   @include lg {
     width: 85%;
   }
   @include xl {
-    width: 68%;
+    width: 70%;
     padding: 0 0 20px;
   }
   @include xxl {
-    font-size: 34px;
+    font-size: 36px;
   }
 }
 
@@ -80,10 +81,14 @@
   background: transparent;
   font-size: 17px;
   font-weight: 600;
+  display: none;
   &:hover {
     text-decoration: none;
     background-color: #fff;
     color: $dark-blue;
+  }
+  @include vsm {
+    display: inline-block;
   }
 }
 

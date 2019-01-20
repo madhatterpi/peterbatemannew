@@ -1,5 +1,8 @@
+
 $black:               #1d1f20;
-$blue:                #1ae4d3;
+$blue:                #6de2ef;
+// $blue:                #1ae4d3;
+$underline:           lighten( $blue, 30% );
 $light-blue:          #f3f5f7;
 $text-light:          #bdc6d2;
 $dark-blue:           #575b5f;
@@ -8,7 +11,13 @@ $yellow:              #f9bf3b;
 $orange:              #ffb55e;
 $grey:                grey;
 $dark-grey:           #494b49;
-$dark-text:           #5C5C5C;
+$dark-text:           #3e3e3e;
+$warning-red:         #f9683b;
+$newb:                #52c7dc;
+
+
+$font-family-text:   'Karla', sans-serif;
+$font-family-header: 'Roboto Slab', serif;
 
 
 // brighter blue #00cdc3
@@ -17,3 +26,5 @@ $dark-text:           #5C5C5C;
 //$blue:                #1fa2b8;
 //$blue:                #1ad9e4;
 // $dark-blue:           #42464a;
+//$blue:                #52c7dc;
+//$dark-text:           #5a5a5a;

@@ -2,29 +2,36 @@
 
 // Automatically injected Bower dependencies via wiredep (never manually edit this block)
 // bower:scss
+@import "../../bower_components/css-hamburgers/_sass/hamburgers/hamburgers.scss";
 // endbower
 
 // Common
 // ----------
 @import "common/media-queries";
-@import "common/fontawesome-all";
+
 @import "common/global";
 // Components
 // ----------
 @import "components/about";
+@import "components/backtotop";
 @import "components/blog";
 @import "components/buttons";
 @import "components/contact";
+@import "components/cookie-bar";
 @import "components/cf7";
 @import "components/front-page-intro";
 @import "components/get-started";
 @import "components/grid";
 @import "components/hero";
+@import "components/lost";
 @import "components/portfolio";
+@import "components/post-navigation";
 @import "components/review";
 @import "components/scroll-down-button";
 @import "components/services";
 @import "components/title";
+@import "components/underline";
+@import "components/underline-block-accent";
 @import "components/welcome";
 @import "components/wp-classes";
 // Layouts
@@ -34,4 +41,5 @@
 @import "layouts/sidebar";
 @import "layouts/pages";
 @import "layouts/posts";
+@import "layouts/related-posts";
 @import "layouts/tinymce";

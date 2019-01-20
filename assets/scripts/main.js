@@ -79,12 +79,20 @@
 
 // Mobile Menu
 jQuery(function($) {
-  $('.menu-icon').click(function() {
-    $(this).toggleClass('menu-content--is-visible menu-icon--close-x');
+  $('.hamburger').on('click', function(e) {
+    e.preventDefault();
+    $(this).toggleClass('is-active');
     $('body').toggleClass("fixed-position");
     $('.main-menu').toggleClass('mobile-menu-overlay');
     $('.menu-primary-nav-container').toggleClass('mobile-menu-visible');
   });
+
+  // $('.menu-icon').click(function() {
+  //   $(this).toggleClass('menu-content--is-visible menu-icon--close-x');
+  //   $('body').toggleClass("fixed-position");
+  //   $('.main-menu').toggleClass('mobile-menu-overlay');
+  //   $('.menu-primary-nav-container').toggleClass('mobile-menu-visible');
+  // });
 });
 
 jQuery(function($) {
@@ -99,19 +107,19 @@ jQuery(function($) {
   });
 });
 
-//Portfolio
-jQuery(function($) {
-  $('.project__overlay').on('hover', function() {
-    $(this).children().find('h2').toggleClass('project__top');
-    $(this).children().find('.button__projects').toggleClass('project__bottom');
-    $(this).children().find('.project__meta').toggleClass('project__hi');
-  });
-});
 
+
+//Portfolio
+// jQuery(function($) {
+//   $('.project__overlay').on('hover', function() {
+//     $(this).children().find('h2').toggleClass('project__top');
+//     $(this).children().find('.button__projects').toggleClass('project__bottom');
+//     $(this).children().find('.project__meta').toggleClass('project__hi');
+//   });
+// });
+//
 jQuery(function($) {
   $('.project').on('hover', function() {
-    $(this).children().find('h2').toggleClass('project__top');
-    $(this).children().find('p').toggleClass('project__bottom');
     $(this).children().find('.project__text').toggleClass('project__hi');
   });
 });
@@ -129,13 +137,13 @@ jQuery(function($) {
 // fade in links
 jQuery(function($) { // document ready
 
-  $("div.menu-icon").click(function() {
-    if ( $(this).hasClass("menu-content--is-visible") ) {
+  $("div.hamburger").click(function() {
+    if ( $(this).hasClass("is-active") ) {
 
       console.log("hi")
 
       $(".menu-item").each(function(i) {
-        $(this).delay(150 * i).queue(function(nxt) {
+        $(this).delay(125 * i).queue(function(nxt) {
           $(this).css('visibility','visible').hide().fadeIn();
         nxt();
         });
@@ -148,6 +156,11 @@ jQuery(function($) { // document ready
     }
 
   });
+
+  $('.arrow-up').click(function() {
+    $('html, body').animate({scrollTop:0}, '600');
+  });
+
 
 
 }); // document ready

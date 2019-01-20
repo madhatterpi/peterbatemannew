@@ -1,5 +1,5 @@
-.abouts {
-  font-size: 18px;
+.abouts .container {
+  padding: 0 30px;
 }
 
 .why-section {
@@ -48,25 +48,13 @@
 .about-me__text {
   padding-top: 20px;
   @include lg {
-    padding: 0;
+    padding: 5px 0 0 0;
   }
 }
 
-.header--about {
-  position: relative;
-  &:after {
-    content: "";
-    height: 6px;
-    width: 25%;
-    display: block;
-    background-color: #1ae4d3;
-    position: absolute;
-    bottom: -30px;
-    left: 5px;
-    @include lg {
-      bottom: -45px;
-    }
-  }
+.about-me__text h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 
 .big {
@@ -107,5 +95,24 @@
   @include md {
     text-align: left;
     padding: 15px 50px;
+  }margin: 0 12%;
+}
+
+.about-images {
+  display: flex;
+  margin: 0 50px;
+  max-height: 510px;
+  overflow: hidden;
+  @include lg {
+    margin: 0 12%;
   }
+}
+
+.about-images__cell {
+  margin: 0 auto;
+}
+
+.about-images img {
+  max-width: 100%;
+  height: auto;
 }

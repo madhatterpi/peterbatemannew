@@ -1,0 +1,25 @@
+#back-to-top {
+    position: fixed;
+    bottom:10%;
+    right: 3%;
+    z-index: 9999;
+    width: 42px;
+    height: 42px;
+    text-align: center;
+    line-height: 38px;
+    background: #d2d2d2;
+    color: $grey;
+    cursor: pointer;
+    border: 0;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+    font-size: 18px;
+}
+#back-to-top:hover {
+    background: lighten(#d2d2d2, 5%);
+}
+#back-to-top.show {
+    opacity: 0.8;
+}

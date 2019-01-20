@@ -2,10 +2,10 @@
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 10px 0;
+  // padding: 10px 0;
   z-index: 2;
   @include lg {
-    padding: 32px 0;
+    // padding: 32px 0;
   }
   ul {
     padding: 0;
@@ -24,7 +24,7 @@
 
 .menu-item {
   list-style-type: none;
-  padding: 16px;
+  padding: 14px;
   visibility: hidden;
   @include xl {
     visibility: visible;
@@ -42,13 +42,13 @@
 }
 
 .site-header__logo {
-  font-size: 24px;
+  font-size: 26px;
   position: absolute;
-  top: 15px;
+  top: 20px;
   left: 15px;
   font-weight: 600;
   float: left;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 1px;
   a {
     color: #fff;
@@ -56,11 +56,9 @@
       text-decoration: none;
     }
   }
-  @include md {
-    font-size: 20px;
-  }
   @include lg {
-    font-size: 25px;
+    font-size: 28px;
+    top: 26px;
   }
 }
 
@@ -70,7 +68,7 @@
   visibility: hidden;
   opacity: 0;
   height: 100%;
-  background-color: #3eb6ac;
+  background-color: #5471de;
   position: fixed;
   text-align: center;
   overflow: hidden;
@@ -90,6 +88,41 @@
   }
 }
 
+.hamburger {
+  position: absolute;
+  z-index: 10;
+  top: 20px;
+  right: 15px;
+  padding: 0;
+  @include xl {
+    display: none;
+  }
+}
+
+.hamburger-inner,
+.hamburger-inner:after,
+.hamburger-inner:before {
+  background: #fff;
+  opacity: 1;
+  width: 30px;
+  height: 3px;
+  border-radius: 1px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.hamburger-box {
+  width: 30px;
+}
+
+.hamburger.is-active:hover, .hamburger:hover {
+  opacity: 1;
+}
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before {
+  background: #fff;
+}
+
 .main-menu-container {
   display: block;
   position: absolute;
@@ -101,7 +134,7 @@
     right: 0;
     height: 60px;
     transform: none;
-    top: auto;
+    top: 20px;
     left: auto;
   }
 }
@@ -120,7 +153,6 @@
   padding-left: 25px;
 }
 
-
 .mobile-menu-visible {
   visibility: visible;
 }
@@ -128,10 +160,23 @@
 .menu-primary-nav-container {
   visibility: visible;
   a {
-    font-size: 18px;
-    padding: 8px 0;
+    padding: 4px 0;
     position: relative;
-    letter-spacing: 0.12em;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 26px;
+    font-weight: 500;
+    color: #fff;
+    display: block;
+    @include vsm {
+      padding: 8px 0;
+    }
+    @include xl {
+      font-size: 20px;
+      padding: 8px 0;
+      position: relative;
+    }
   }
 }
 
@@ -141,26 +186,6 @@
   @include xl {
    visibility: visible;
   }
-}
-
-.menu-primary-nav-container a {
-  text-decoration: none;
-  text-transform: capitalize;
-  font-size: 28px;
-  font-weight: 500;
-  color: #fbfbfb;;
-  display: block;
-  @include xl {
-    font-size: 18px;
-    padding: 8px 0;
-    position: relative;
-    letter-spacing: 0.12em;
-  }
-}
-
-/* When you mouse over the navigation links, change their color */
-.menu-primary-nav-container a:hover, .overlay a:focus {
-    color: #f1f1f1;
 }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
@@ -174,11 +199,11 @@
     height: 19px;
     position: absolute;
     z-index: 10;
-    top: 15px;
+    top: 23px;
     right: 15px;
     cursor: pointer;
-    @include lg {
-      top: 10px;
+    @include md {
+      top: 13px;
     }
     &::before {
       content: "";
@@ -219,21 +244,6 @@
     }
   }
 
-  .menu-icon--close-x {
-    &::before {
-      transform: rotate(45deg) scaleX(1.25);
-    }
-
-    .menu-icon__middle {
-      opacity: 0;
-      transform: scaleX(0);
-    }
-
-    &::after {
-      transform: rotate(-45deg) scaleX(1.25) translateY(1px);
-    }
-  } // menu button
-
 @include xl {
   .icons {
     display: none;
@@ -270,14 +280,6 @@
       background-color: $blue;
       position: absolute;
       bottom: 0;
-    }
-  }
-}
-
-@include xxl {
-  .menu-primary-nav-container {
-    a {
-      font-size: 18px;
     }
   }
 }

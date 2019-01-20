@@ -1,5 +1,6 @@
 .get-started {
-  background: $light-blue;
+  // background: #dae4e8;
+  background: #5471de;
   padding: 80px 0;
   @include xl {
     padding: 100px 20px;
@@ -16,16 +17,17 @@
 
 .get-started__header {
   display: inline-block;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 400;
   padding-right: 35px;
   margin: 0;
   line-height: 1.2em;
+  color: #fff;
 }
 
 .get-started__highlight {
   font-weight: 500;
-  color: $blue;
+  color: $dark-text;
 }
 
 .get-started__button {

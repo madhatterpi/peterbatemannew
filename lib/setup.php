@@ -101,8 +101,9 @@ function display_sidebar() {
  * Theme assets
  */
 function assets() {
-  wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
+   wp_enqueue_style( 'google_fonts', '//fonts.googleapis.com/css?family=Roboto+Slab:400,700|Karla:400,700|Roboto:900', false, null );
 
+  wp_enqueue_style('sage/css', Assets\asset_path('styles/main.css'), false, null);
 
   if (is_single() && comments_open() && get_option('thread_comments')) {
     wp_enqueue_script('comment-reply');
@@ -110,7 +111,12 @@ function assets() {
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
 
-  wp_enqueue_script('font-awesome', Assets\asset_path('scripts/fontawesome-all.js'), null, true);
+  // Font Awesome 5
+  wp_enqueue_script('regular', 'https://pro.fontawesome.com/releases/v5.5.0/js/regular.js', ['jquery'], null, true);
+  wp_enqueue_script('brands', 'https://pro.fontawesome.com/releases/v5.5.0/js/brands.js', ['jquery'], null, true);
+  wp_enqueue_script('fajs', 'https://pro.fontawesome.com/releases/v5.5.0/js/fontawesome.js', ['jquery'], null, true);
+
+
 
   wp_enqueue_script('sage/custom_js', Assets\asset_path('scripts/scroll-reveal-custom.js'), ['sage/js'], null, true);
 

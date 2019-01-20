@@ -16,8 +16,13 @@
       ?>
 
     </div>
-    <!-- <footer> -->
-      <!-- <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?> -->
-     <!-- </footer>  -->
+
   </article>
+
+  <?php get_template_part('templates/page', 'related-posts'); ?>
+  
 <?php endwhile; ?>
+
+
+
+<?php get_template_part('templates/page', 'get-started'); ?>
